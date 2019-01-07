@@ -8,7 +8,11 @@ compiler:
   - clang #5.0.1
 
 build: 
-
+  pre_ci_boot:
+    image_name: drydock/u14cppall
+    image_tag: v6.4.4
+    pull: true
+    
   ci:
     - ls
     - pwd
